@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//Crie uma arrow function que receba uma mensagem e exiba na tela
+class App extends Component {
+  mensagem = () => {
+    return "Estou exibindo uma mensagem no console"  
 }
 
-export default App;
+//Crie uma arrow function que retorne o dobro de um número e exiba na tela
+double = (number) => {
+  return number * 2
+}
+  render() {
+    return (
+    <div>
+     <h2>{this.mensagem()}</h2>
+     <h2>O dobro do número é: {this.double(9)}</h2>
+    </div>
+    )
+  }
+}
+export default App
+
